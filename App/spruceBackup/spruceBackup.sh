@@ -55,6 +55,9 @@ log_message "Backup file will be: $seven_z_file"
 
 # Define the folders to backup
 folders="
+/mnt/SDCARD/App/Syncthing/config
+/mnt/SDCARD/App/PICO/bin
+/mnt/SDCARD/App/SSH/sshkeys
 /mnt/SDCARD/.config/ppsspp/PSP/SAVEDATA
 /mnt/SDCARD/.config/ppsspp/PSP/PPSSPP_STATE
 /mnt/SDCARD/.config/ppsspp/PSP/SYSTEM
