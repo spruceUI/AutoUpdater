@@ -26,6 +26,8 @@ Once you've place the Auto Updater files and the latest release 7z file on your 
 
 Once back on your A30, go to your Apps and you should see a new `spruce Updater` app in your list of apps. Just launch this and sit back. This will backup your current install, install the update, restore your install, upgrade any files that need it, and then shut down. You'll need to power back on manually afterwards.
 
+Afterward you should go through our fresh update process to finish setting up the install. During the Auto Updater process your back up was automatically restored so you should be good to go. Happy gaming!
+
 ## F.A.Q
 
 ### "Will I loose all my configs and settings running this?"
