@@ -54,5 +54,5 @@ If you see this the spruce 7z you provided could not be validated as a proper sp
 If you see this the update process successfully ran but a file wasn't able to be extracted from the update file. Hopefully this shouldn't appear, but if it does it can be mostly harmless. But check the update log in your `SDCARD/Updater/update.log` file for more details. 
 
 ### Message "Update extraction incomplete: `directory`"
-This is a post install verfication. If you see this something went wrong with your install, the updater stopped running immediatly. If this happens to you it's most likely an SDCard failure of some kind, be sure to verify your SDCard. During the process a compatible backup file was made. You should hold onto that and after checking your SDCard manually update and run spruce Restore afterwards.
+This is a post install verfication. If you see this something went wrong with your install, the updater stopped running immediatly. If this happens to you it's most likely an SDCard failure of some kind, be sure to verify your SDCard. During the process a compatible backup file was made. You should hold onto that and after checking your SDCard [manually update](https://github.com/spruceUI/spruceOS/wiki/Updating-to-the-Latest-Release#windows) and run spruce Restore afterwards.
 
