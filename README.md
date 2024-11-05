@@ -34,7 +34,7 @@ Afterward you should go through our fresh update process to finish setting up th
 No, this contains a self contained version of our spruce Backup app to backup your valuable data. This includes but is not limited to: PPSSPP saves/configs, NDS saves/configs, Syncthing setup, PICO8 saves/bios, and your RetroArch config. Your Saves, Roms, and BIOS folders will be left untouched.
 
 ### "What versions of spruce does this work for?"
-The currently targeted version of spruce this was written for was 2.0.0 to 2.3.0. But it should work _well_ if not entirely with lower versions. We'll work to getting lower versions the official stamp of approval but overall they should work perfectly fine with AutoUpdater. If we hear/find otherwise we'll update this.
+The currently targeted version of spruce this was written for was 1.4.3 to 2.3.0. But it should work _well_ if not entirely with lower versions. We'll work to getting lower versions the official stamp of approval but overall they should work perfectly fine with AutoUpdater. If we hear/find otherwise we'll update this. We've ran this on version 1.0.0 of Spruce, but no promises.
 
 ## AutoUpdater Messages
 
