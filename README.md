@@ -1,17 +1,16 @@
 # Spruce Auto Updater
-This is for updating your existing spruce install and for versions 2.3.0 and below. This will allow you to update to the latest version of Spruce painlessly and keep all your relevant configurations and settings.
+This is for updating your existing spruce install of versions 2.3.0 and below. This will allow you to update to the latest version of Spruce painlessly and keep all your relevant configurations and settings.
 
 If you are looking for first time installation instructions go to our wiki on the spruceUI repo
 
 [Spruce Install Instructions](https://github.com/spruceUI/spruceOS/wiki/Installation-Instructions)
 
-If you are on spruce 3.0.0 or above you do not need this, it should be included in some form on those versions.
+If you are on spruce 3.0.0 or above you do not need this, it is included in these versions.
 
 ## Preparation
 
 You don't need to do much except make sure you have enough free space on your SDCard for the latest version of spruce, and some room to spare. Make sure you have at least 30% battery left or charging when you run the updater.
 
-Your SDCard and A30
 
 ## Usage
 To use this get the latest release and plug your A30's SDCard into your computer. AutoUpdater should be a contained zip file with all the parts you'll need to update your spruce install. You'll need the latest AutoUpdater compatiblie spruce file.
@@ -30,11 +29,11 @@ Afterward you should go through our fresh update process to finish setting up th
 
 ## F.A.Q
 
-### "Will I loose all my configs and settings running this?"
+### "Will I lose all my configs and settings running this?"
 No, this contains a self contained version of our spruce Backup app to backup your valuable data. This includes but is not limited to: PPSSPP saves/configs, NDS saves/configs, Syncthing setup, PICO8 saves/bios, and your RetroArch config. Your Saves, Roms, and BIOS folders will be left untouched.
 
 ### "What versions of spruce does this work for?"
-The currently targeted version of spruce this was written for was 1.4.3 to 2.3.0. But it should work _well_ if not entirely with lower versions. We'll work to getting lower versions the official stamp of approval but overall they should work perfectly fine with AutoUpdater. If we hear/find otherwise we'll update this. We've ran this on version 1.0.0 of Spruce, but no promises.
+The currently targeted version of spruce this was written for was 1.4.3 to 2.3.0. But it should work _well_ if not entirely with lower versions. We'll work to getting lower versions the official stamp of approval but overall they should work perfectly fine with AutoUpdater. If we hear/find otherwise we'll update this. We've ran this on version 1.0 of Spruce, but no promises.
 
 ## AutoUpdater Messages
 
