@@ -35,6 +35,9 @@ No, this contains a self contained version of our spruce Backup app to backup yo
 ### "What versions of spruce does this work for?"
 The currently targeted version of spruce this was written for was 1.4.3 to 2.3.0. But it should work _well_ if not entirely with lower versions. We'll work to getting lower versions the official stamp of approval but overall they should work perfectly fine with AutoUpdater. If we hear/find otherwise we'll update this. We've ran this on version 1.0 of Spruce, but no promises.
 
+### "What files does this affect?"
+All of them except those in the `BIOS`, `Roms`, `Saves`, and `Themes` folders. Those folders are left entirely untouched just to make sure you keep your personal information. Anything important outside of those folders mentioned are backed up when updating. (And placed in the `Saves/spruce/backups`). All your other folders will be affected by the update and will be cleaned up and updated.
+
 ## AutoUpdater Messages
 
 ### Message "No update file found"
