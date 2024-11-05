@@ -50,7 +50,6 @@ exec >>"$LOG_LOCATION" 2>&1
 # Find update 7z file
 if ! check_for_update_file; then
     display "No update file found" 5
-    sed -i 's|"label"|"#label"|' "$APP_DIR/config.json"
     exit 1
 fi
 
@@ -118,6 +117,8 @@ fi
 
 log_update_message "Checking file permissions"
 ls -l "$UPDATE_FILE" >>"$LOG_LOCATION"
+
+move_legacy_bios
 
 # Creating a backup of current install
 display "Creating a backup of user data and configs..."

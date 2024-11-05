@@ -6,7 +6,7 @@ boost_processing() {
     echo 1 >/sys/devices/system/cpu/cpu2/online 2>/dev/null
     echo 1 >/sys/devices/system/cpu/cpu3/online 2>/dev/null
     chmod a+w /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 2>/dev/null
-	echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 2>/dev/null
+    echo performance >/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 2>/dev/null
     chmod a-w /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 2>/dev/null
 }
 
@@ -38,6 +38,26 @@ check_installation_validity() {
     # Both files exist, installation is valid
     echo "$(date '+%Y-%m-%d %H:%M:%S') - Installation appears to be valid"
     return 0
+}
+
+OLD_DIR="/mnt/SDCARD/RetroArch/.retroarch/BIOS"
+NEW_DIR="/mnt/SDCARD/BIOS"
+move_legacy_bios() {
+    if [ -d "$OLD_DIR" ]; then
+        mkdir -p "$NEW_DIR"
+
+        # Move all contents, including hidden files and subdirectories
+        cd "$OLD_DIR" || exit 1
+        find . -mindepth 1 -exec sh -c '
+        for item do
+            if [ -e "$item" ]; then
+                dir=$(dirname "$item")
+                mkdir -p "'"$NEW_DIR"'/$dir"
+                mv "$item" "'"$NEW_DIR"'/$item"
+            fi
+        done
+    ' sh {} +
+    fi
 }
 
 verify_7z_content() {
