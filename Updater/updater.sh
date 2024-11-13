@@ -177,6 +177,7 @@ log_update_message "Checking file permissions"
 ls -l "$UPDATE_FILE" >>"$LOG_LOCATION"
 
 move_legacy_bios
+kill_network_services
 
 # Creating a backup of current install
 display "Creating a backup of user data and configs..."

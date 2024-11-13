@@ -58,6 +58,13 @@ check_installation_validity() {
     return 0
 }
 
+kill_network_services() {
+    killall -9 dropbear
+    killall -9 smbd
+    killall -9 sftpgo
+    killall -9 syncthing
+}
+
 OLD_DIR="/mnt/SDCARD/RetroArch/.retroarch/BIOS"
 NEW_DIR="/mnt/SDCARD/BIOS"
 move_legacy_bios() {
@@ -77,6 +84,7 @@ move_legacy_bios() {
     ' sh {} +
     fi
 }
+
 
 verify_7z_content() {
     local archive="$1"
