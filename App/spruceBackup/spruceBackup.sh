@@ -10,11 +10,10 @@ FLAGS_DIR=/mnt/SDCARD/spruce/flags
 
 . /mnt/SDCARD/spruce/scripts/helperFunctions.sh
 
-log_verbose
 ICON_PATH="/mnt/SDCARD/spruce/imgs/backup.png"
 
 log_message "----------Running Backup script----------"
-set_performance
+# set_performance
 
 # Modify display function to respect silent mode
 display_message() {
@@ -58,16 +57,20 @@ folders="
 /mnt/SDCARD/App/Syncthing/config
 /mnt/SDCARD/App/PICO/bin
 /mnt/SDCARD/App/SSH/sshkeys
+/config/system.json
+/config/joypad.config
 /mnt/SDCARD/.config/ppsspp/PSP/SAVEDATA
 /mnt/SDCARD/.config/ppsspp/PSP/PPSSPP_STATE
 /mnt/SDCARD/.config/ppsspp/PSP/SYSTEM
 /mnt/SDCARD/App/spruceRestore/.lastUpdate
+/mnt/SDCARD/Emu/PICO8/.lexaloffle
 /mnt/SDCARD/Emu/PICO8/bin
 /mnt/SDCARD/Emu/.emu_setup/overrides
-/mnt/SDCARD/RetroArch/retroarch.cfg
-/mnt/SDCARD/RetroArch/.retroarch/config
 /mnt/SDCARD/Emu/NDS/backup
 /mnt/SDCARD/Emu/NDS/savestates
+/mnt/SDCARD/RetroArch/retroarch.cfg
+/mnt/SDCARD/RetroArch/.retroarch/config
+/mnt/SDCARD/RetroArch/.retroarch/overlay
 /mnt/SDCARD/spruce/bin/SSH/sshkeys
 /mnt/SDCARD/spruce/bin/Syncthing/config
 /mnt/SDCARD/spruce/settings/gs_list
@@ -120,7 +123,13 @@ else
 Check '/Saves/spruce/spruceBackup.log' for more details" --okay
 fi
 
-log_message "Backup process finished running"
-log_verbose
+# Clean up old backups, keeping only the 7 most recent
+log_message "Cleaning up old backups..."
+cd "$BACKUP_DIR/backups" || exit
+ls -t spruceBackup_*.7z | tail -n +8 | while read -r old_backup; do
+    log_message "Removing old backup: $old_backup"
+    rm "$old_backup"
+done
 
-auto_regen_tmp_update
+log_message "Backup process finished running"
+

@@ -85,6 +85,12 @@ move_legacy_bios() {
     fi
 }
 
+read_only_check() {
+    if [ $(mount | grep SDCARD | cut -d"(" -f 2 | cut -d"," -f1 ) == "ro" ]; then
+        mount -o remount,rw /dev/mmcblk0p1 /mnt/SDCARD
+    fi
+}
+
 
 verify_7z_content() {
     local archive="$1"
