@@ -17,7 +17,7 @@ To use this get the latest release and plug your A30's SDCard into your computer
 
 This should just be the 7zip file in the [latest spruce release](https://github.com/spruceUI/spruceOS/releases).
 
-Unzip the AutoUpdater.zip file and place the contents directly onto your SDCard's root. They should align somewhat with the already existing spruce folders, like `Apps`. If it prompts you to overwrite be sure to accept.
+Unzip the EZUpdaterVx.x.x.zip file and place the contents directly onto your SDCard's root. They should align somewhat with the already existing spruce folders, like `Apps`. If it prompts you to overwrite be sure to accept.
 
 Place your spruceVxx.xx.xx.7z on the root of your SDCard. **Do not extract this file!** You should place the 7z directly on your SDCard. This will be used by AutoUpdater for you.
 
